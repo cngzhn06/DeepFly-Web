@@ -13,12 +13,12 @@ export const HeroSection = () => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="px-6 text-lg text-gray-600 text-poppins">
-              Savvy Candidate Outreach Tool, Designed for Recruiters.{" "}
+              Savvy Outreach Tool, Designed for Web3 founders.{" "}
             </h1>
             <h2 className="mt-5 text-6xl leading-2 text-gray-900 sm:leading-tight md:text-6xl lg:text-6xl  font-poppins font-bold">
               Effortlessly Streamline{" "}
               <span className="bg-gradient-to-r from-success via-green-500 to-green-600 inline-block text-transparent bg-clip-text">
-                Your Recruitment
+                Your user onboarding
               </span>{" "}
               Process with Our Custom Solutions.
             </h2>
@@ -30,7 +30,7 @@ export const HeroSection = () => {
                 className="px-5 py-2 text-black bg-success rounded-md"
                 role="button"
               >
-                Get more clients
+                Get more users
               </a>
 
               <a
