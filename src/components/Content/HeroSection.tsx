@@ -18,7 +18,7 @@ export const HeroSection = () => {
             <h2 className="mt-5 text-6xl leading-2 text-gray-900 sm:leading-tight md:text-6xl lg:text-6xl  font-poppins font-bold">
               Effortlessly Streamline{" "}
               <span className="bg-gradient-to-r from-success via-green-500 to-green-600 inline-block text-transparent bg-clip-text">
-                Recruitment
+               Your Recruitment
               </span>{" "}
               Get more clients.
             </h2>
