@@ -1,6 +1,11 @@
 # NextJS & Tailwind CSS SaaS Landing Page Template
 
+<div align="center">
+
 !["MockUp"](https://raw.githubusercontent.com/mohitchandel/saas-landing-page/main/public/images/mockup/mockup.png)
+
+</div>
+
 
 Welcome to the NextJS & Tailwind CSS SaaS Landing Page Template!
 
