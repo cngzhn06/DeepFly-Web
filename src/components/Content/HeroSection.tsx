@@ -5,7 +5,7 @@ import {
   FigmaLogo,
   MainChimpLogo,
   NotionLogo,
-} from "@/components/content/HeroLogos";
+} from "@/components/Content/HeroLogos";
 import { motion } from "framer-motion";
 import { PlayIcon, RocketIcon } from "lucide-react";
 import Link from "next/link";

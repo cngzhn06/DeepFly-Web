@@ -1,10 +1,10 @@
-import { HeroSection } from "@/components/content/HeroSection";
-import { ClientsSection } from "@/components/content/Clients";
-import { ContactUs } from "@/components/content/ContactUs";
-import { Features } from "@/components/content/Features";
-import { HowItWork } from "@/components/content/HowItWork";
-import { Pricing } from "@/components/content/Pricing";
-import { Testimonials } from "@/components/content/Testimonials";
+import { HeroSection } from "@/components/Content/HeroSection";
+import { ClientsSection } from "@/components/Content/Clients";
+import { ContactUs } from "@/components/Content/ContactUs";
+import { Features } from "@/components/Content/Features";
+import { HowItWork } from "@/components/Content/HowItWork";
+import { Pricing } from "@/components/Content/Pricing";
+import { Testimonials } from "@/components/Content/Testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
