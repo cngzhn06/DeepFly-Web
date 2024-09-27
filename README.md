@@ -1,11 +1,10 @@
-# NextJS & Tailwind CSS SaaS Landing Page Template
-
 <div align="center">
+
+# NextJS & DaisyUi SaaS Landing Page Template With Framer Motion
 
 !["MockUp"](https://raw.githubusercontent.com/mohitchandel/saas-landing-page/main/public/images/mockup/mockup.png)
 
 </div>
-
 
 Welcome to the NextJS & Tailwind CSS SaaS Landing Page Template!
 
@@ -53,7 +52,6 @@ Feel free to use this template for your SaaS landing page, completely free of ch
 If you find this template helpful and would like to support its development, consider
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mohitchandel)
-
 
 ---
 
