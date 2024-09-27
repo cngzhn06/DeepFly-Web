@@ -2,7 +2,7 @@ import React from "react";
 
 export const HowItWork = () => {
   return (
-    <section className="py-10 bg-white sm:py-16 lg:py-20">
+    <section className="py-32">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-poppins text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
@@ -38,35 +38,28 @@ export const HowItWork = () => {
             </div>
 
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                <span className="animate-pulse flex items-center justify-center w-16 h-16 mx-auto bg-black border-2 border-gray-200 rounded-full shadow">
-                  {" "}
-                  2{" "}
-                </span>
+              <div className="animate-pulse flex items-center justify-center w-16 h-16 mx-auto bg-black border-2 border-gray-200 rounded-full shadow">
+                <span className="text-xl font-semibold text-white"> 2 </span>
               </div>
               <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                Application Management
+                Candidate Sourcing
               </h3>
               <p className="mt-4 text-base text-gray-600">
-                Streamline your workflow with our applicant tracking system,
-                allowing you to easily manage and track candidates&apos;
-                progress.
+                Tap into our AI-powered algorithms to effortlessly discover and
+                attract top talent from diverse channels.
               </p>
             </div>
 
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                <span className="animate-pulse flex items-center justify-center w-16 h-16 mx-auto bg-black border-2 border-gray-200 rounded-full shadow">
-                  {" "}
-                  3{" "}
-                </span>
+              <div className="animate-pulse flex items-center justify-center w-16 h-16 mx-auto bg-black border-2 border-gray-200 rounded-full shadow">
+                <span className="text-xl font-semibold text-white"> 3 </span>
               </div>
               <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                Collaborative Decision-Making
+                Candidate Sourcing
               </h3>
               <p className="mt-4 text-base text-gray-600">
-                Foster seamless communication and collaboration among your
-                hiring team with centralized feedback and evaluation tools.
+                Tap into our AI-powered algorithms to effortlessly discover and
+                attract top talent from diverse channels.
               </p>
             </div>
           </div>

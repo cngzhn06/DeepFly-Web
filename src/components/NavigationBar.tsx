@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { RocketIcon } from "lucide-react";
 import React, { useState } from "react";
 
 export const NavigationBar = () => {
@@ -7,112 +10,89 @@ export const NavigationBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navVariants = {
+    hidden: { y: -100 },
+    visible: {
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        delay: 0.1,
+      },
+    },
+  };
+
   return (
-    <nav className=" border-gray-200 bg-black">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <svg
-            width={50}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              {" "}
-              <path
-                d="M13 14L17 9L22 18H2.84444C2.46441 18 2.2233 17.5928 2.40603 17.2596L10.0509 3.31896C10.2429 2.96885 10.7476 2.97394 10.9325 3.32786L15.122 11.3476"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>{" "}
-            </g>
-          </svg>
-        </a>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="text-black text-sm rounded-lg px-5 py-2 bg-[#18c964]"
-          >
-            Get started
-          </button>
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
+    <motion.nav
+      initial="hidden"
+      animate="visible"
+      variants={navVariants}
+      className="border-gray-200 container mx-auto"
+    >
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Service</a>
+              </li>
+              <li>
+                <a>Pricing</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <a className="btn btn-ghost text-xl">
+            <RocketIcon />
+            SaaSLP
+          </a>
         </div>
-        <div
-          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
-            isMenuOpen ? "block" : "hidden"
-          }`}
-          id="navbar-cta"
-        >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-black">
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white  hover:text-success"
-                aria-current="page"
-              >
-                Home
-              </a>
+              <a>Home</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white  hover:text-success"
-              >
-                Services
-              </a>
+              <a>Service</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white  hover:text-success"
-              >
-                Pricing
-              </a>
+              <a>Pricing</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white  hover:text-success"
-              >
-                Contact
-              </a>
+              <a>Contact</a>
             </li>
           </ul>
         </div>
+        <div className="navbar-end gap-2">
+          <a className="btn btn-outline btn-sm">SignUp</a>
+          <a className="btn btn-neutral btn-sm">LogIn</a>
+        </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };

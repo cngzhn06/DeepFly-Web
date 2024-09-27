@@ -1,117 +1,93 @@
+"use client";
+import { motion, useInView } from "framer-motion";
+import { Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
 export const Pricing = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
+
   return (
-    <section className="py-10 bg-black sm:py-16 lg:py-20">
+    <motion.section
+      className="py-32 bg-neutral"
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:items-stretch md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
           <div className="flex flex-col justify-between lg:py-5">
-            <h2 className="font-poppins text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl">
-              Discover Flexible Pricing Plans Tailored to Suit Your Unique
-              Hiring Requirements
-            </h2>
-            <div className="">
+            <motion.h2
+              className="font-poppins text-xl font-bold leading-tight text-secondary-content lg:leading-tight md:text-5xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            >
+              Discover Our Flexible Pricing Plans Specially Tailored to Suit
+              Your Unique Hiring Process
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={hasAnimated ? { opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+            >
               <blockquote className="mt-2">
                 <p className="text-lg leading-relaxed text-white">
-                  Choose the perfect plan for your business, whether you&apos;re
-                  a small startup looking to scale or an enterprise-level
+                  Choose the perfect plan for your business, whether you're a
+                  small startup looking to scale or an enterprise-level
                   organization with complex hiring requirements. Ensuring you
                   get the most value out of our recruitment software.
                 </p>
               </blockquote>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="">
-            <div className="overflow-hidden bg-white rounded-md">
+          <motion.div
+            className=""
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          >
+            <div className="overflow-hidden card bg-white">
               <div className="p-10">
-                <p className="mt-4 text-6xl font-bold text-black">$200</p>
+                <p className="mt-4 text-6xl font-bold text-neutral">$200</p>
 
                 <ul className="flex flex-col mt-8 space-y-4">
-                  <li className="inline-flex items-center space-x-2">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                  {[
+                    "Advanced features for complex recruitment needs",
+                    "Scalable options to accommodate increasing hiring demands",
+                    "Enhanced features for efficient candidate management",
+                    "Dedicated support and customization options for seamless integration",
+                  ].map((item, index) => (
+                    <motion.li
+                      className="inline-flex items-center space-x-2"
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
+                      transition={{
+                        duration: 0.5,
+                        ease: "easeOut",
+                        delay: 0.6 + index * 0.2,
+                      }}
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-base font-medium text-gray-900">
-                      {" "}
-                      Advanced features for complex recruitment needs{" "}
-                    </span>
-                  </li>
-
-                  <li className="inline-flex items-center space-x-2">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-base font-medium text-gray-900">
-                      {" "}
-                      Scalable options to accommodate increasing hiring demands{" "}
-                    </span>
-                  </li>
-
-                  <li className="inline-flex items-center space-x-2">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-base font-medium text-gray-900">
-                      {" "}
-                      Enhanced features for efficient candidate management{" "}
-                    </span>
-                  </li>
-
-                  <li className="inline-flex items-center space-x-2">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-base font-medium text-gray-900">
-                      {" "}
-                      Dedicated support and customization options for seamless
-                      integration{" "}
-                    </span>
-                  </li>
+                      <Check size={18} />
+                      <span className="text-base font-medium">{item}</span>
+                    </motion.li>
+                  ))}
                 </ul>
 
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex items-center justify-center w-full px-8 py-4 mt-10 font-semibold text-black bg-success rounded-md"
-                  role="button"
-                >
+                <button className="btn btn-neutral mt-4 w-full">
                   Get Full Access
-                </a>
+                </button>
 
                 <div className="flex items-center mt-5">
                   <svg
@@ -129,15 +105,14 @@ export const Pricing = () => {
                     />
                   </svg>
                   <span className="ml-2 text-sm text-gray-500">
-                    {" "}
-                    14 Days Moneyback Guarantee{" "}
+                    14 Days Moneyback Guarantee
                   </span>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
