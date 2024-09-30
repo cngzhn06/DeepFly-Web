@@ -21,6 +21,9 @@ const config: Config = {
         success: "#18c964",
       },
     },
+    daisyui: {
+      themes: ["light"],
+    },
   },
   plugins: [require("daisyui")],
 };
