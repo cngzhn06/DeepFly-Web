@@ -80,56 +80,6 @@ export const HeroSection = () => {
 
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7 }}
-                className="mt-8"
-              >
-                <p className="mb-4 text-center text-base font-medium text-black">
-                  Powered By
-                </p>
-                <div
-                  className="wow fadeInUp flex items-center justify-center gap-4 text-center"
-                  data-wow-delay=".3s"
-                >
-                  <Link
-                    href="#"
-                    className="text-black duration-300 ease-in-out "
-                    target="_blank"
-                  >
-                    <GitHubLogo fill="none" height={26} width={30} />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-black duration-300 ease-in-out "
-                    target="_blank"
-                  >
-                    <LinearLogo fill="#5E6AD2" height={32} width={32} />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-black duration-300 ease-in-out "
-                    target="_blank"
-                  >
-                    <FigmaLogo fill="none" height={32} width={32} />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-black duration-300 ease-in-out "
-                    target="_blank"
-                  >
-                    <MainChimpLogo fill="none" height={32} width={32} />
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-black duration-300 ease-in-out "
-                    target="_blank"
-                  >
-                    <NotionLogo fill="none" height={32} width={32} />
-                  </Link>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
