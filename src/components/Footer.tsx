@@ -1,184 +1,123 @@
 import {
   FacebookIcon,
-  GithubIcon,
   InstagramIcon,
-  TwitterIcon,
+  LinkedinIcon,
 } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 
 export const Footer = () => {
   return (
-    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-          <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <p className="text-base leading-relaxed text-gray-600 mt-7">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
+    <section className="py-12 bg-indigo-800 text-gray-100">
+      <div className="px-4 mx-auto max-w-7xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-8">
+          <div className="col-span-2 lg:col-span-2 lg:pr-8">
+            <h2 className="text-2xl font-bold">Mantıklı ve Yaratıcı Düşünce</h2>
+            <p className="text-base mt-4 text-gray-300">
+              Çocuklar için zekâ oyunları, matematiksel düşünmeyi, mantıklı çözüm bulmayı ve yaratıcılığı destekleyen uygulamalar içerir. Bizimle bu keşif yolculuğuna çıkın.
             </p>
 
-            <ul className="flex items-center space-x-3 mt-9">
+            <ul className="flex items-center space-x-4 mt-6">
               <li>
-                <a href="#" title="" className="">
-                  <TwitterIcon />
+              </li>
+              <li>
+                <a href="#" title="LinkedIn" className="hover:text-blue-500">
+                  <LinkedinIcon size={20} />
                 </a>
               </li>
-
               <li>
-                <a href="#" title="" className="">
-                  <FacebookIcon />
+                <a href="#" title="Instagram" className="hover:text-pink-500">
+                  <InstagramIcon size={20} />
                 </a>
               </li>
-
               <li>
-                <a href="#" title="" className="">
-                  <InstagramIcon />
-                </a>
-              </li>
-
-              <li>
-                <a href="#" title="" className="">
-                  <GithubIcon />
+                <a href="#" title="Facebook" className="hover:text-blue-600">
+                  <FacebookIcon size={20} />
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-              Company
-            </p>
-
-            <ul className="mt-6 space-y-4">
+            <h3 className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+              Hakkımızda
+            </h3>
+            <ul className="mt-4 space-y-3">
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  About{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Misyon
                 </a>
               </li>
-
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Features{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Değerlerimiz
                 </a>
               </li>
-
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Works{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Yöntemlerimiz
                 </a>
               </li>
-
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Career{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Kariyer
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-              Help
-            </p>
-
-            <ul className="mt-6 space-y-4">
+            <h3 className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+              Yardım
+            </h3>
+            <ul className="mt-4 space-y-3">
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Customer Support{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Destek
                 </a>
               </li>
-
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Delivery Details{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Kullanım Şartları
                 </a>
               </li>
-
               <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Terms & Conditions{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex text-base text-black transition-all duration-200"
-                >
-                  {" "}
-                  Privacy Policy{" "}
+                <a href="#" className="text-base transition hover:text-gray-300">
+                  Gizlilik Politikası
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-              Subscribe to newsletter
-            </p>
-
-            <form action="#" method="POST" className="mt-6">
-              <div>
-                <label className="sr-only">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your email"
-                  className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                />
-              </div>
-
-              <button type="submit" className="btn btn-neutral mt-3">
-                Subscribe
+          <div className="col-span-2 lg:col-span-2 lg:pl-8">
+            <h3 className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+              Bize Katılın
+            </h3>
+            <form action="#" method="POST" className="mt-4">
+              <label className="sr-only">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-posta adresinizi girin"
+                className="block w-full p-3 text-gray-800 placeholder-gray-400 bg-gray-100 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+              <button
+                type="submit"
+                className="mt-4 w-full px-4 py-2 text-white bg-yellow-600 rounded-md hover:bg-yellow-500 transition"
+              >
+                Abone Ol
               </button>
             </form>
           </div>
         </div>
 
-        <hr className="mt-16 mb-10 border-gray-200" />
-
-        <p className="text-sm text-center text-gray-600">
-          © Copyright 2021, All Rights Reserved,{" "}
-          <a target="_blank" href="https://mohitchandel.in">
-            Created By Mohit
-          </a>
+        <hr className="mt-12 mb-8 border-gray-700" />
+        
+        <p className="text-sm text-center text-gray-500">
+          © {new Date().getFullYear()}, Tüm Hakları Saklıdır.{" "}
+          <a rel="noopener noreferrer" className="text-yellow-400 hover:underline">
+            Cengizhan ÇALIŞKAN
+          </a> tarafından geliştirildi.
         </p>
       </div>
     </section>

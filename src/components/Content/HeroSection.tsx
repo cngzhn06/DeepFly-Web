@@ -49,7 +49,7 @@ export const HeroSection = () => {
                 className="badge py-4 badge-neutral text-poppins"
               >
                 <RocketIcon className="text-primary-content" size={"18"} />{" "}
-                &nbsp; Savvy Candidate Outreach Tool, Designed for Recruiters.{" "}
+                &nbsp; Çocukar İçin Derin Düşündürecek Uygulamalar.{" "}
               </motion.div>
               <motion.h2
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -57,11 +57,11 @@ export const HeroSection = () => {
                 transition={{ duration: 0.7 }}
                 className="mt-5 text-6xl leading-2 text-gray-900 sm:leading-tight md:text-6xl lg:text-6xl  font-poppins font-bold"
               >
-                Effortlessly Streamline{" "}
+                Çocuklarınızın Daha{" "}
                 <span className="bg-gradient-to-r from-blue-400 via-violet-300 to-purple-400 inline-block text-transparent bg-clip-text">
-                  Your Recruitment
+                  Derin Düşünmesini
                 </span>{" "}
-                & Get more clients.
+                İstermisiniz.
               </motion.h2>
 
               <motion.div
@@ -75,13 +75,9 @@ export const HeroSection = () => {
                   title="Get more users"
                   className="btn btn-outline"
                 >
-                  Get more users
+                  Daha Fazlası
                 </Link>
 
-                <Link href="#" title="Watch demo" className="btn btn-neutral">
-                  <PlayIcon />
-                  Watch demo
-                </Link>
               </motion.div>
 
               <motion.div

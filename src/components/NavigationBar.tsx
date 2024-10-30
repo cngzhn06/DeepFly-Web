@@ -54,43 +54,37 @@ export const NavigationBar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <a>Ana Sayfa</a>
               </li>
               <li>
-                <a>Service</a>
+                <a>Servisler</a>
               </li>
               <li>
-                <a>Pricing</a>
-              </li>
-              <li>
-                <a>Contact</a>
+                <a>Fiyatlar</a>
               </li>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">
             <RocketIcon />
-            SaaSLP
+            DeepFly
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <a>Ana Sayfa</a>
             </li>
             <li>
-              <a>Service</a>
+              <a>Servisler</a>
             </li>
             <li>
-              <a>Pricing</a>
-            </li>
-            <li>
-              <a>Contact</a>
+              <a>Fiyatlar</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <a className="btn btn-outline btn-sm">SignUp</a>
-          <a className="btn btn-neutral btn-sm">LogIn</a>
+          <a className="btn btn-outline btn-sm">Kayıt Ol</a>
+          <a className="btn btn-neutral btn-sm">Giriş Yap</a>
         </div>
       </div>
     </motion.nav>

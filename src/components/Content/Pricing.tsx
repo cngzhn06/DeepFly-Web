@@ -31,8 +31,7 @@ export const Pricing = () => {
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             >
-              Discover Our Flexible Pricing Plans Specially Tailored to Suit
-              Your Unique Hiring Process
+              Eğlenceli ve Zekâ Geliştirici Oyun Paketlerimizle Tanışın!
             </motion.h2>
 
             <motion.div
@@ -42,10 +41,8 @@ export const Pricing = () => {
             >
               <blockquote className="mt-2">
                 <p className="text-lg leading-relaxed text-white">
-                  Choose the perfect plan for your business, whether you&apos;re
-                  a small startup looking to scale or an enterprise-level
-                  organization with complex hiring requirements. Ensuring you
-                  get the most value out of our recruitment software.
+                  Çocuğunuzun seviyesine uygun paketleri seçerek, eğlenceli ve
+                  düşündürücü oyunlarla zekâ gelişimini destekleyin!
                 </p>
               </blockquote>
             </motion.div>
@@ -59,14 +56,14 @@ export const Pricing = () => {
           >
             <div className="overflow-hidden card bg-white">
               <div className="p-10">
-                <p className="mt-4 text-6xl font-bold text-neutral">$200</p>
+                <p className="mt-4 text-6xl font-bold text-neutral">₺150</p>
 
                 <ul className="flex flex-col mt-8 space-y-4">
                   {[
-                    "Advanced features for complex recruitment needs",
-                    "Scalable options to accommodate increasing hiring demands",
-                    "Enhanced features for efficient candidate management",
-                    "Dedicated support and customization options for seamless integration",
+                    "Farkı bul ve nokta birleştirme gibi eğlenceli oyunlar",
+                    "Her seviyeye uygun zekâ bulmacaları",
+                    "Zekâ gelişimini takip için puanlama sistemi",
+                    "Çocuğunuzun öğrenme hızına uygun ilerleme",
                   ].map((item, index) => (
                     <motion.li
                       className="inline-flex items-center space-x-2"
@@ -86,7 +83,7 @@ export const Pricing = () => {
                 </ul>
 
                 <button className="btn btn-neutral mt-4 w-full">
-                  Get Full Access
+                  Tüm Oyunlara Erişim Sağla
                 </button>
 
                 <div className="flex items-center mt-5">
@@ -105,7 +102,7 @@ export const Pricing = () => {
                     />
                   </svg>
                   <span className="ml-2 text-sm text-gray-500">
-                    14 Days Moneyback Guarantee
+                    14 Gün İçinde İade Garantisi
                   </span>
                 </div>
               </div>
